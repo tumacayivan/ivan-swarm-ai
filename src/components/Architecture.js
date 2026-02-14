@@ -3,20 +3,20 @@ import React from 'react';
 function Architecture() {
   const components = [
     {
-      title: 'Local Pattern Extraction',
-      description: 'Extracts local price patterns and micro-structures through advanced filters that detect specific patterns at a local level.'
+      title: 'Advanced Pattern Recognition',
+      description: 'Identifies complex market patterns and structures through proprietary algorithms designed for financial market analysis.'
     },
     {
-      title: 'Sequential Learning',
-      description: 'Learns temporal sequences and remembers important patterns from earlier in sequences, understanding when trends continue or reverse.'
+      title: 'Temporal Intelligence',
+      description: 'Understands market dynamics over time, recognizing how historical patterns influence future market behavior.'
     },
     {
-      title: 'Long-Range Dependencies',
-      description: 'Uses attention mechanisms to identify which time steps are most important and understand long-range dependencies across the sequence.'
+      title: 'Contextual Awareness',
+      description: 'Analyzes market conditions across different time horizons to provide comprehensive market insights.'
     },
     {
-      title: 'Multi-Scale Fusion',
-      description: 'Combines outputs from all components, learning optimal ways to integrate local patterns, sequences, and attention for superior predictions.'
+      title: 'Intelligent Integration',
+      description: 'Synthesizes multiple data streams and analytical perspectives to generate accurate market predictions.'
     }
   ];
 
@@ -24,7 +24,7 @@ function Architecture() {
     <section className="section">
       <h2 className="section-title">Architecture</h2>
       <p className="section-subtitle">
-        Hybrid deep learning design for comprehensive market analysis
+        Advanced deep learning system for comprehensive market analysis
       </p>
       <div className="architecture-grid">
         {components.map((component, index) => (

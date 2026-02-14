@@ -4,7 +4,7 @@ function Capabilities() {
   const capabilities = [
     {
       title: 'Price Data Analysis',
-      description: 'Learns from OHLCV data across multiple symbols including equity indices, cryptocurrencies, commodities, and forex pairs.',
+      description: 'Analyzes market data across multiple asset classes including equity indices, cryptocurrencies, commodities, and forex pairs.',
       features: [
         'Price patterns and momentum',
         'Volume analysis and correlations',
@@ -64,7 +64,7 @@ function Capabilities() {
     },
     {
       title: 'Temporal Pattern Recognition',
-      description: 'Recognizes intraday, daily, weekly, monthly, and seasonal patterns through engineered timestamp features.',
+      description: 'Recognizes intraday, daily, weekly, monthly, and seasonal patterns in market behavior.',
       features: [
         'Intraday patterns',
         'Day-of-week effects',
@@ -73,13 +73,13 @@ function Capabilities() {
       ]
     },
     {
-      title: 'Hybrid Architecture',
-      description: 'Combines multiple deep learning components for local patterns, sequential dependencies, and long-range relationships.',
+      title: 'Advanced Learning System',
+      description: 'Utilizes sophisticated deep learning techniques to process and synthesize complex market information.',
       features: [
-        'Local pattern extraction',
-        'Sequential dependencies',
-        'Long-range relationships',
-        'Multi-scale attention'
+        'Multi-dimensional analysis',
+        'Intelligent data synthesis',
+        'Adaptive learning mechanisms',
+        'Predictive accuracy optimization'
       ]
     },
     {
