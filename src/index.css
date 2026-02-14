@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Cascadia Code';
+  src: url('./fonts/CascadiaCode.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cascadia Code';
+  src: url('./fonts/CascadiaCodeItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Cascadia Mono';
+  src: url('./fonts/CascadiaMono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #666666;
+  --background-color: #ffffff;
+  --surface-color: #f8f8f8;
+  --border-color: #e0e0e0;
+  --accent-color: #0066cc;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+  --max-width: 1200px;
+}
+
+body {
+  font-family: 'Cascadia Code', 'Cascadia Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+code {
+  font-family: 'Cascadia Code', 'Cascadia Mono', monospace;
+}
