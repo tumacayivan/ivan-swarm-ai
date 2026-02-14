@@ -14,7 +14,7 @@ function Capabilities() {
     },
     {
       title: 'Multi-Timeframe Learning',
-      description: 'Analyzes patterns across hourly, daily, weekly, and monthly timeframes to understand trend hierarchy and confluence.',
+      description: 'Analyzes patterns across hourly, daily, weekly, and monthly time periods to understand trend hierarchy and confluence.',
       features: [
         'Timeframe hierarchy recognition',
         'Multi-scale pattern detection',
