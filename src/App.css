@@ -229,6 +229,16 @@
   font-size: 0.875rem;
 }
 
+.footer a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--accent-color);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
