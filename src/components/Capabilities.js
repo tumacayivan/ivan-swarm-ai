@@ -14,32 +14,32 @@ function Capabilities() {
     },
     {
       title: 'Multi-Timeframe Learning',
-      description: 'Analyzes patterns across hourly, daily, weekly, and monthly time periods to understand trend hierarchy and confluence.',
+      description: 'Analyzes patterns across multiple time periods to understand trend hierarchy and market dynamics.',
       features: [
-        'Timeframe hierarchy recognition',
+        'Time hierarchy recognition',
         'Multi-scale pattern detection',
         'Noise filtering',
         'Trend context understanding'
       ]
     },
     {
-      title: 'Cross-Symbol Correlation',
+      title: 'Cross-Asset Correlation',
       description: 'Discovers relationships between different asset classes and learns how markets move together or diverge.',
       features: [
         'Cross-asset correlations',
-        'Sector rotation patterns',
+        'Market relationship patterns',
         'Market regime detection',
-        'Risk-on/risk-off signals'
+        'Risk sentiment signals'
       ]
     },
     {
-      title: 'VIX & Volatility Features',
-      description: 'Integrates multiple volatility and credit market indicators including VIX, Treasury yields, and sector ETFs.',
+      title: 'Volatility & Market Indicators',
+      description: 'Integrates multiple volatility and credit market indicators to assess market conditions and risk levels.',
       features: [
         'Volatility regime detection',
         'Credit market signals',
-        'Yield curve analysis',
-        'Financial sector health'
+        'Yield analysis',
+        'Financial sector assessment'
       ]
     },
     {
@@ -56,20 +56,20 @@ function Capabilities() {
       title: 'Economic Data Integration',
       description: 'Learns from economic indicators and events to understand macroeconomic impacts on market movements.',
       features: [
-        'GDP and inflation signals',
+        'Economic indicator analysis',
         'Employment data analysis',
-        'Central bank policy effects',
+        'Policy impact assessment',
         'Economic event timing'
       ]
     },
     {
       title: 'Temporal Pattern Recognition',
-      description: 'Recognizes intraday, daily, weekly, monthly, and seasonal patterns in market behavior.',
+      description: 'Recognizes recurring patterns in market behavior across different time horizons.',
       features: [
-        'Intraday patterns',
-        'Day-of-week effects',
-        'Monthly patterns',
-        'Seasonal trends'
+        'Short-term patterns',
+        'Recurring market behaviors',
+        'Periodic trends',
+        'Seasonal variations'
       ]
     },
     {
@@ -83,13 +83,13 @@ function Capabilities() {
       ]
     },
     {
-      title: 'Regime-Dependent Learning',
-      description: 'Adapts predictions based on market conditions including bull/bear markets and volatility regimes.',
+      title: 'Adaptive Learning',
+      description: 'Adapts predictions based on changing market conditions and economic environments.',
       features: [
-        'Market regime detection',
-        'Economic regime awareness',
+        'Market condition detection',
+        'Economic environment awareness',
         'Pattern adaptation',
-        'Confidence calibration'
+        'Dynamic adjustment'
       ]
     }
   ];
