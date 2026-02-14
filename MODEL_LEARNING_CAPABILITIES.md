@@ -98,7 +98,44 @@ The model combines ALL symbols into one sequence, learning:
 
 ---
 
-## 5. **ECONOMIC & MACROECONOMIC DATA**
+## 5. **GLOBAL INDICES (Yahoo Finance)**
+
+### Purpose of Adding:
+- **Measure Global Economic Health**: See how stock markets around the world are performing
+- **Cross-Regional Correlation**: Understand how different regions respond to global events
+- **Economic Regime Context**: Identify if the global economy is doing well or struggling
+
+### What the Model Learns:
+- **Global Economic Health**: How stock markets around the world are performing
+- **Regional Divergence**: When different regions move independently vs. together
+- **Global Risk-On/Risk-Off**: How international markets confirm or contradict US market signals
+- **Economic Transmission**: How economic events in one region affect global markets
+- **Currency-Market Relationships**: How currency movements relate to regional equity performance
+- **Global Growth Signals**: Whether the global economy is expanding or contracting
+- **Cross-Regional Momentum**: How momentum in one region affects others
+
+### How It Helps the ML Model:
+- **Regime Classification**: Helps the model understand if the global economy is doing well or struggling
+- **Confirmation Signals**: Global indices provide confirmation or divergence signals for US market moves
+- **Early Warning System**: International markets often lead or lag US markets, providing predictive signals
+- **Risk Assessment**: Global market performance helps assess overall risk appetite
+- **Economic Context**: Provides broader economic context beyond US-centric indicators
+
+### Potential Global Indices (Examples):
+- **European Indices**: FTSE (UK), DAX (Germany), CAC (France), IBEX (Spain)
+- **Asian Indices**: Nikkei (Japan), Hang Seng (Hong Kong), Shanghai Composite (China)
+- **Other Regional**: ASX (Australia), TSX (Canada), Bovespa (Brazil)
+- **Global ETFs**: EFA (Developed Markets), EEM (Emerging Markets), VEA (International)
+
+### Features Per Global Index:
+- **OHLCV Data**: Open, High, Low, Close, Volume, Adjusted Close
+- **19 Timestamp Features**: Hour, day, week, month cyclic patterns
+- **Multiple Timeframes**: 1D, 5D, 1M, 3M, 6M, YTD, 1Y, 5Y, ALL
+- **Cross-Regional Features**: Correlations with US indices and other global markets
+
+---
+
+## 6. **ECONOMIC & MACROECONOMIC DATA**
 
 ### Data Sources:
 - **Investing.com Economic Calendar**: Economic events and indicators
@@ -123,7 +160,7 @@ The model combines ALL symbols into one sequence, learning:
 
 ---
 
-## 6. **TIMESTAMP & TEMPORAL FEATURES**
+## 7. **TIMESTAMP & TEMPORAL FEATURES**
 
 ### 19 Engineered Timestamp Features:
 - **Cyclic Features** (sin/cos transformations):
@@ -156,7 +193,7 @@ The model combines ALL symbols into one sequence, learning:
 
 ---
 
-## 7. **ENTRY ZONE LEARNING** (When Enabled)
+## 8. **ENTRY ZONE LEARNING** (When Enabled)
 
 ### When INCLUDE_ENTRY_ZONES_IN_TRAINING = True:
 - **Premium/Discount Zones**: Price levels relative to recent ranges
@@ -166,7 +203,7 @@ The model combines ALL symbols into one sequence, learning:
 
 ---
 
-## 8. **HYBRID ARCHITECTURE LEARNING CAPABILITIES**
+## 9. **HYBRID ARCHITECTURE LEARNING CAPABILITIES**
 
 ### CNN Branch (Local Pattern Extraction):
 - **Short-term Patterns**: Local price patterns and micro-structures
@@ -194,7 +231,7 @@ The model combines ALL symbols into one sequence, learning:
 
 ---
 
-## 9. **WHAT THE MODEL PREDICTS**
+## 10. **WHAT THE MODEL PREDICTS**
 
 ### Target Variable:
 - **Close Price**: The model predicts the next close price for the target symbol (default: US30)
@@ -208,7 +245,7 @@ The model combines ALL symbols into one sequence, learning:
 
 ---
 
-## 10. **TRAINING DATA CHARACTERISTICS**
+## 11. **TRAINING DATA CHARACTERISTICS**
 
 ### Data Volume:
 - **Per Timeframe**: Up to 10,000 candles per timeframe (configurable)
@@ -227,7 +264,7 @@ The model combines ALL symbols into one sequence, learning:
 
 ---
 
-## 11. **IMPLICIT LEARNING (What the Model Discovers Without Explicit Features)**
+## 12. **IMPLICIT LEARNING (What the Model Discovers Without Explicit Features)**
 
 The model learns these patterns implicitly from raw data:
 
@@ -250,7 +287,7 @@ The model learns these patterns implicitly from raw data:
 
 ---
 
-## 12. **CONFIDENCE & DECISION LEARNING**
+## 13. **CONFIDENCE & DECISION LEARNING**
 
 ### The Model Learns When to Be Confident:
 - **Symbol Alignment**: When multiple symbols move together
@@ -270,7 +307,7 @@ The model learns these patterns implicitly from raw data:
 
 ---
 
-## 13. **REGIME-DEPENDENT LEARNING**
+## 14. **REGIME-DEPENDENT LEARNING**
 
 The model learns that the same pattern can behave differently under different conditions:
 
@@ -289,18 +326,19 @@ The model learns that the same pattern can behave differently under different co
 
 ---
 
-## 14. **COMPLETE FEATURE SET SUMMARY**
+## 15. **COMPLETE FEATURE SET SUMMARY**
 
 ### Total Features the Model Can Learn From:
 
 1. **OHLCV Data**: 5 features per symbol × 28 symbols = 140 base features
 2. **Volume Data**: 1 feature per symbol × 28 symbols = 28 features
 3. **VIX Features**: 15 symbols × 6 OHLCV fields × multiple timeframes = ~540+ features
-4. **Timestamp Features**: 19 features per data point
-5. **Economic Data**: Variable number of economic indicators
-6. **Entry Zone Features**: 2 features (when enabled)
-7. **Cross-Symbol Features**: When COMBINE_INDICES=True, all symbols combined
-8. **Multi-Timeframe Features**: When COMBINED_TIMEFRAMES=True, all timeframes combined
+4. **Global Indices Features**: Variable number of global indices × 6 OHLCV fields × multiple timeframes = variable features
+5. **Timestamp Features**: 19 features per data point
+6. **Economic Data**: Variable number of economic indicators
+7. **Entry Zone Features**: 2 features (when enabled)
+8. **Cross-Symbol Features**: When COMBINE_INDICES=True, all symbols combined
+9. **Multi-Timeframe Features**: When COMBINED_TIMEFRAMES=True, all timeframes combined
 
 ### Total Estimated Features:
 - **Base Features**: ~700+ features
@@ -310,7 +348,7 @@ The model learns that the same pattern can behave differently under different co
 
 ---
 
-## 15. **WHAT THE MODEL CANNOT LEARN**
+## 16. **WHAT THE MODEL CANNOT LEARN**
 
 ### Limitations:
 - **Future Information**: Cannot see future data (no look-ahead bias)
@@ -321,7 +359,7 @@ The model learns that the same pattern can behave differently under different co
 
 ---
 
-## 16. **TRAINING PROCESS LEARNING**
+## 17. **TRAINING PROCESS LEARNING**
 
 ### During Training, the Model Learns:
 - **Feature Importance**: Which features are most predictive
@@ -340,6 +378,7 @@ Your machine learning model is a **comprehensive learning system** that can disc
 ✅ **Price patterns** across 28 symbols and 9 timeframes  
 ✅ **Cross-asset correlations** and market relationships  
 ✅ **Volatility regimes** and risk indicators (VIX, credit markets)  
+✅ **Global indices** and international market performance  
 ✅ **Economic context** and macroeconomic impacts  
 ✅ **Temporal patterns** (hourly, daily, weekly, monthly, seasonal)  
 ✅ **Multi-scale patterns** (local, sequential, long-range)  

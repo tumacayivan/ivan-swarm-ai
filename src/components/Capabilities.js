@@ -4,7 +4,7 @@ function Capabilities() {
   const capabilities = [
     {
       title: 'Price Data Analysis',
-      description: 'Learns from OHLCV data across 28 symbols including equity indices, cryptocurrencies, commodities, and forex pairs.',
+      description: 'Learns from OHLCV data across multiple symbols including equity indices, cryptocurrencies, commodities, and forex pairs.',
       features: [
         'Price patterns and momentum',
         'Volume analysis and correlations',
@@ -34,12 +34,22 @@ function Capabilities() {
     },
     {
       title: 'VIX & Volatility Features',
-      description: 'Integrates 15 volatility and credit market indicators including VIX, Treasury yields, and sector ETFs.',
+      description: 'Integrates multiple volatility and credit market indicators including VIX, Treasury yields, and sector ETFs.',
       features: [
         'Volatility regime detection',
         'Credit market signals',
         'Yield curve analysis',
         'Financial sector health'
+      ]
+    },
+    {
+      title: 'Global Indices',
+      description: 'Monitors international stock markets to understand global economic health and cross-regional market performance.',
+      features: [
+        'Global economic health assessment',
+        'Regional divergence detection',
+        'Cross-regional correlation analysis',
+        'International market confirmation signals'
       ]
     },
     {
@@ -54,7 +64,7 @@ function Capabilities() {
     },
     {
       title: 'Temporal Pattern Recognition',
-      description: 'Recognizes intraday, daily, weekly, monthly, and seasonal patterns through 19 engineered timestamp features.',
+      description: 'Recognizes intraday, daily, weekly, monthly, and seasonal patterns through engineered timestamp features.',
       features: [
         'Intraday patterns',
         'Day-of-week effects',
@@ -64,12 +74,12 @@ function Capabilities() {
     },
     {
       title: 'Hybrid Architecture',
-      description: 'Combines CNN for local patterns, LSTM for sequences, and Transformer for long-range dependencies.',
+      description: 'Combines multiple deep learning components for local patterns, sequential dependencies, and long-range relationships.',
       features: [
         'Local pattern extraction',
         'Sequential dependencies',
         'Long-range relationships',
-        'Multi-head attention'
+        'Multi-scale attention'
       ]
     },
     {

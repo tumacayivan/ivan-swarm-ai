@@ -10,10 +10,11 @@ function Hero() {
         Advanced Machine Learning Model for Financial Market Prediction
       </p>
       <p className="hero-description">
-        A comprehensive learning system powered by a Hybrid CNN-LSTM-Transformer architecture 
+        A comprehensive learning system powered by advanced deep learning architecture 
         that analyzes price patterns, cross-asset correlations, volatility regimes, and economic 
-        indicators across 28 symbols and 9 timeframes to deliver intelligent market predictions.
+        indicators across multiple symbols and timeframes to deliver intelligent market predictions.
       </p>
+      <p className="hero-developer">Researcher/Developer: Ivan Tumacay</p>
     </section>
   );
 }
