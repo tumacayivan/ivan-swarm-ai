@@ -15,8 +15,8 @@ function Architecture() {
       description: 'Analyzes market conditions across different time horizons to provide comprehensive market insights.'
     },
     {
-      title: 'Intelligent Integration',
-      description: 'Synthesizes multiple data streams and analytical perspectives to generate accurate market predictions.'
+      title: 'Cooperative Integration',
+      description: 'Synthesizes multiple data streams and analytical perspectives through advanced integration mechanisms to generate accurate market predictions.'
     }
   ];
 

@@ -33,23 +33,43 @@ function Capabilities() {
       ]
     },
     {
-      title: 'Volatility & Market Indicators',
-      description: 'Integrates multiple volatility and credit market indicators to assess market conditions and risk levels.',
+      title: 'Volatility & Risk Indicators',
+      description: 'Integrates volatility, credit stress, and market indicators to assess market conditions and provide early-warning signals.',
       features: [
         'Volatility regime detection',
-        'Credit market signals',
-        'Yield analysis',
+        'Credit market health assessment',
+        'Early-warning stress signals',
         'Financial sector assessment'
       ]
     },
     {
-      title: 'Global Indices',
-      description: 'Monitors international stock markets to understand global economic health and cross-regional market performance.',
+      title: 'Global Markets & Forex',
+      description: 'Monitors international equity markets and currency pairs to understand global economic health, liquidity flows, and capital movements.',
       features: [
         'Global economic health assessment',
-        'Regional divergence detection',
-        'Cross-regional correlation analysis',
-        'International market confirmation signals'
+        'Regional market analysis',
+        'Currency correlation analysis',
+        'Global liquidity flow detection'
+      ]
+    },
+    {
+      title: 'Market Breadth Analysis',
+      description: 'Monitors market participation quality and internal market health beyond index-level price movements.',
+      features: [
+        'Market participation assessment',
+        'Breadth divergence detection',
+        'Internal market health signals',
+        'Distribution pattern recognition'
+      ]
+    },
+    {
+      title: 'Commodities & Energy',
+      description: 'Monitors energy commodities and precious metals to understand inflation pressures and economic growth signals.',
+      features: [
+        'Energy cost impact analysis',
+        'Inflation pressure detection',
+        'Economic growth indicators',
+        'Commodity correlation patterns'
       ]
     },
     {
@@ -63,33 +83,13 @@ function Capabilities() {
       ]
     },
     {
-      title: 'Temporal Pattern Recognition',
-      description: 'Recognizes recurring patterns in market behavior across different time horizons.',
-      features: [
-        'Short-term patterns',
-        'Recurring market behaviors',
-        'Periodic trends',
-        'Seasonal variations'
-      ]
-    },
-    {
       title: 'Advanced Learning System',
-      description: 'Utilizes sophisticated deep learning techniques to process and synthesize complex market information.',
+      description: 'Utilizes sophisticated deep learning techniques with cooperative learning mechanisms to adapt predictions based on changing market conditions.',
       features: [
         'Multi-dimensional analysis',
-        'Intelligent data synthesis',
-        'Adaptive learning mechanisms',
-        'Predictive accuracy optimization'
-      ]
-    },
-    {
-      title: 'Adaptive Learning',
-      description: 'Adapts predictions based on changing market conditions and economic environments.',
-      features: [
-        'Market condition detection',
-        'Economic environment awareness',
+        'Cooperative learning mechanisms',
         'Pattern adaptation',
-        'Dynamic adjustment'
+        'Predictive accuracy optimization'
       ]
     }
   ];

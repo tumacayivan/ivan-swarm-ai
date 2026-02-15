@@ -11,8 +11,8 @@ function Hero() {
       </p>
       <p className="hero-description">
         A comprehensive learning system powered by advanced deep learning architecture 
-        that analyzes price patterns, cross-asset correlations, volatility regimes, and economic 
-        indicators across multiple assets and time periods to deliver intelligent market predictions.
+        that analyzes price patterns, cross-asset correlations, volatility regimes, credit stress, 
+        and economic indicators across global markets and multiple time periods to deliver intelligent market predictions.
       </p>
       <p className="hero-developer">Researcher/Developer: Ivan Tumacay</p>
     </section>
