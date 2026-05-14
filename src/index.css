@@ -1,3 +1,7 @@
+/* ============================================================
+   IVANSWARMAI — DECLASSIFIED DOCUMENT (B&W, AGED, MESSY)
+   ============================================================ */
+
 @font-face {
   font-family: 'Cascadia Code';
   src: url('./fonts/CascadiaCode.ttf') format('truetype');
@@ -26,32 +30,113 @@
 }
 
 :root {
-  --primary-color: #000000;
-  --secondary-color: #666666;
-  --background-color: #ffffff;
-  --surface-color: #f8f8f8;
-  --border-color: #e0e0e0;
-  --accent-color: #0066cc;
-  --text-primary: #1a1a1a;
-  --text-secondary: #666666;
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 6rem;
-  --max-width: 1200px;
+  /* ink — pure black & neutral grays */
+  --ink: #0a0a0a;
+  --ink-faded: #2e2e2e;
+  --ink-worn: #5c5c5c;
+  --ink-ghost: #8c8c8c;
+
+  /* paper — neutral gray, like a B&W photocopier scan */
+  --paper: #d6d6d6;
+  --paper-light: #e2e2e2;
+  --paper-mid: #c4c4c4;
+  --paper-shadow: #7a7a7a;
+  --paper-edge: #4a4a4a;
+
+  /* utility */
+  --redact: #000000;
+
+  --font-typewriter: 'Cascadia Mono', 'Cascadia Code', 'Courier Prime', 'Courier New', monospace;
+  --font-mono: 'Cascadia Mono', 'Cascadia Code', 'Courier New', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Cascadia Code', 'Cascadia Mono', monospace;
+  font-family: var(--font-typewriter);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-color);
-  color: var(--text-primary);
-  line-height: 1.6;
-  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.7;
+  font-size: 20px;
+
+  /* aged paper — pure grayscale, heavy vignette + irregular blotches */
+  background-color: var(--paper);
+  background-image:
+    /* corner darkening blotches — irregular sizes */
+    radial-gradient(ellipse 35% 22% at 0% 0%, rgba(0,0,0,0.32), transparent 70%),
+    radial-gradient(ellipse 28% 18% at 100% 0%, rgba(0,0,0,0.28), transparent 70%),
+    radial-gradient(ellipse 40% 25% at 100% 100%, rgba(0,0,0,0.30), transparent 70%),
+    radial-gradient(ellipse 30% 20% at 0% 100%, rgba(0,0,0,0.26), transparent 70%),
+    /* a stain mid-edge */
+    radial-gradient(ellipse 14% 8% at 5% 35%, rgba(0,0,0,0.22), transparent 70%),
+    radial-gradient(ellipse 10% 14% at 95% 60%, rgba(0,0,0,0.20), transparent 70%),
+    /* paper fiber noise */
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.3 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/></svg>"),
+    /* base paper gradient */
+    linear-gradient(180deg, var(--paper-light) 0%, var(--paper) 45%, var(--paper-mid) 100%);
+  background-attachment: fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat;
+}
+
+/* horizontal scan banding */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      rgba(0,0,0,0) 0,
+      rgba(0,0,0,0) 2px,
+      rgba(0,0,0,0.04) 3px,
+      rgba(0,0,0,0) 4px
+    ),
+    /* vertical photocopier streaks */
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,0,0,0) 0,
+      rgba(0,0,0,0) 180px,
+      rgba(0,0,0,0.06) 181px,
+      rgba(0,0,0,0) 182px,
+      rgba(0,0,0,0) 410px,
+      rgba(0,0,0,0.04) 411px,
+      rgba(0,0,0,0) 412px
+    );
+  mix-blend-mode: multiply;
+}
+
+/* dust speckles + heavier grain */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.55;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='520' height='520'><filter id='s'><feTurbulence type='fractalNoise' baseFrequency='2.4' numOctaves='1' stitchTiles='stitch' seed='7'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.45 0'/></filter><rect width='100%25' height='100%25' filter='url(%23s)' opacity='0.5'/></svg>");
+  mix-blend-mode: multiply;
 }
 
 code {
-  font-family: 'Cascadia Code', 'Cascadia Mono', monospace;
+  font-family: var(--font-mono);
+  background: rgba(0,0,0,0.07);
+  padding: 0.1em 0.35em;
+}
+
+::selection {
+  background-color: var(--ink);
+  color: var(--paper-light);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-typewriter);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0;
 }

@@ -1,324 +1,521 @@
+/* ============================================================
+   B&W AGED DOCUMENT — SINGLE-PAGE LAYOUT
+   ============================================================ */
+
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-/* Header */
-.header {
-  position: sticky;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color);
-  z-index: 1000;
-  padding: var(--spacing-sm) 0;
-}
-
-.header-content {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-
-.logo {
-  height: 40px;
-  width: auto;
-}
-
-.logo-text {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  letter-spacing: -0.02em;
-}
-
-/* Hero Section */
-.hero {
-  padding: var(--spacing-xl) var(--spacing-md);
-  max-width: var(--max-width);
-  margin: 0 auto;
-  text-align: center;
-}
-
-.hero-logo {
-  height: 300px;
-  width: auto;
-  /* margin-bottom: var(--spacing-md); */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  margin-bottom: var(--spacing-md);
-  color: var(--text-primary);
-  line-height: 1.1;
-}
-
-.hero-subtitle {
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: var(--text-secondary);
-  max-width: 800px;
-  margin: 0 auto var(--spacing-lg);
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-.hero-description {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.8;
-}
-
-.hero-developer {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  margin-top: var(--spacing-lg);
-  font-weight: 400;
-  opacity: 0.8;
-}
-
-/* Section */
-.section {
-  padding: var(--spacing-xl) var(--spacing-md);
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  margin-bottom: var(--spacing-lg);
-  color: var(--text-primary);
-}
-
-.section-subtitle {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
-  margin-bottom: var(--spacing-md);
-  font-weight: 300;
-}
-
-/* Capabilities Grid */
-.capabilities-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-lg);
-}
-
-.capability-card {
-  background-color: var(--surface-color);
-  border: 1px solid var(--border-color);
-  padding: var(--spacing-md);
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.capability-card:hover {
-  border-color: var(--primary-color);
-  transform: translateY(-2px);
-}
-
-.capability-card-title {
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-bottom: var(--spacing-sm);
-  color: var(--text-primary);
-  letter-spacing: -0.01em;
-}
-
-.capability-card-description {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-.capability-list {
-  list-style: none;
-  margin-top: var(--spacing-sm);
-}
-
-.capability-list li {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  padding: var(--spacing-xs) 0;
-  padding-left: 1.5rem;
   position: relative;
-  line-height: 1.6;
 }
 
-.capability-list li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--accent-color);
-}
-
-/* Architecture Section */
-.architecture-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-lg);
-}
-
-@media (max-width: 1200px) {
-  .architecture-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .architecture-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.architecture-card {
-  background-color: var(--surface-color);
-  border: 1px solid var(--border-color);
-  padding: var(--spacing-md);
-  border-radius: 4px;
-}
-
-.architecture-card-title {
-  font-size: 1.125rem;
-  font-weight: 500;
-  margin-bottom: var(--spacing-sm);
-  color: var(--text-primary);
-}
-
-.architecture-card-description {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-/* Stats Section */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-lg);
-}
-
-.stat-item {
+/* ============================================================
+   CLASSIFICATION BANNER (black, thick, slightly bled)
+   ============================================================ */
+.classification-banner {
+  background: var(--ink);
+  color: var(--paper-light);
   text-align: center;
-  padding: var(--spacing-md);
-}
-
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: 400;
-  color: var(--text-primary);
-  margin-bottom: var(--spacing-xs);
-  letter-spacing: -0.02em;
-}
-
-.stat-label {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
+  font-family: var(--font-typewriter);
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  font-size: 1.05rem;
+  padding: 0.7rem 1rem;
   text-transform: uppercase;
+  position: relative;
+  z-index: 10;
+  /* slight uneven edge */
+  box-shadow:
+    0 -1px 0 rgba(0,0,0,0.4),
+    0 1px 0 rgba(0,0,0,0.4);
+  filter: url(#ink-bleed);
+}
+
+.classification-banner--bottom {
+  margin-top: auto;
+}
+
+/* ============================================================
+   THE DOCUMENT PAGE — single sheet, heavy weathering
+   ============================================================ */
+.page-frame {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 3.5rem 5rem 4rem 7rem;
+  background:
+    /* irregular dark splotches on edges of THIS sheet */
+    radial-gradient(ellipse 18% 10% at 3% 12%, rgba(0,0,0,0.45), transparent 60%),
+    radial-gradient(ellipse 14% 9% at 97% 28%, rgba(0,0,0,0.35), transparent 60%),
+    radial-gradient(ellipse 22% 6% at 60% 100%, rgba(0,0,0,0.40), transparent 60%),
+    radial-gradient(ellipse 8% 16% at 99% 80%, rgba(0,0,0,0.35), transparent 60%),
+    radial-gradient(ellipse 14% 5% at 30% 0%, rgba(0,0,0,0.30), transparent 60%),
+    /* a smudge */
+    radial-gradient(circle at 88% 6%, rgba(0,0,0,0.5) 0, rgba(0,0,0,0) 12%),
+    radial-gradient(circle at 6% 92%, rgba(0,0,0,0.4) 0, rgba(0,0,0,0) 9%),
+    /* sheet base — slightly lighter than body */
+    linear-gradient(180deg, rgba(255,255,255,0.18) 0%, transparent 8%, transparent 92%, rgba(0,0,0,0.10) 100%),
+    var(--paper-light);
+  border: 1px solid rgba(0,0,0,0.35);
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.1) inset,
+    0 12px 28px -8px rgba(0,0,0,0.45),
+    0 4px 0 -2px rgba(0,0,0,0.2);
+}
+
+/* hole punches down the left edge */
+.page-frame::before {
+  content: '';
+  position: absolute;
+  left: 1.8rem;
+  top: 0;
+  bottom: 0;
+  width: 22px;
+  background-image:
+    radial-gradient(circle, rgba(0,0,0,0.82) 0 8px, transparent 10px),
+    radial-gradient(circle, rgba(0,0,0,0.82) 0 8px, transparent 10px),
+    radial-gradient(circle, rgba(0,0,0,0.82) 0 8px, transparent 10px);
+  background-position: center 7%, center 50%, center 93%;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  pointer-events: none;
+  filter: blur(0.5px);
+}
+
+/* a faint diagonal crease */
+.page-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, transparent 30%, rgba(0,0,0,0.10) 30.4%, transparent 30.8%, transparent 65%, rgba(0,0,0,0.07) 65.4%, transparent 65.8%);
+  mix-blend-mode: multiply;
+}
+
+/* ============================================================
+   DOCUMENT TOP — DOCID, stamps, agency block, decl. box
+   ============================================================ */
+.doc-top {
+  position: relative;
+  min-height: 280px;
+  margin-bottom: 2rem;
+  font-family: var(--font-typewriter);
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.doc-id {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--font-typewriter);
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+}
+
+.doc-id::before {
+  content: 'DOCID: ';
+  color: var(--ink-faded);
+}
+
+.agency-block {
+  text-align: center;
+  padding-top: 5.5rem;
+  font-family: var(--font-typewriter);
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.agency-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.agency-location {
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+/* the decl box (left side) */
+.decl-box {
+  position: absolute;
+  top: 7rem;
+  left: 0;
+  width: 320px;
+  border: 2px solid var(--ink);
+  padding: 0.8rem 0.9rem;
+  font-family: var(--font-typewriter);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  background: rgba(255, 255, 255, 0.12);
+  filter: url(#ink-bleed);
+}
+
+.decl-box strong { font-weight: 700; }
+
+/* RECORD COPY vertical strip down right */
+.doc-top .vertical-stamp {
+  position: absolute;
+  right: -3.5rem;
+  top: 0;
+  bottom: 0;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: var(--font-typewriter);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5em;
+  color: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: flex-start;
+  padding-top: 1.5rem;
+  text-transform: uppercase;
+  pointer-events: none;
+  filter: url(#ink-bleed);
+}
+
+/* ============================================================
+   STAMPS — black only, ink-bled, low opacity, slightly skewed
+   ============================================================ */
+.stamp {
+  display: inline-block;
+  font-family: var(--font-typewriter);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 0.55rem 1.2rem;
+  border: 3px solid currentColor;
+  color: var(--ink);
+  background: transparent;
+  transform: rotate(-4deg);
+  opacity: 0.62;
+  font-size: 1.25rem;
+  position: relative;
+  white-space: nowrap;
+  filter: url(#ink-bleed);
+  /* uneven ink — mask out a portion */
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='100'><filter id='m'><feTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='2' seed='4'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.5 1.6'/></filter><rect width='100%25' height='100%25' filter='url(%23m)'/></svg>");
+  -webkit-mask-size: 100% 100%;
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='100'><filter id='m'><feTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='2' seed='4'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.5 1.6'/></filter><rect width='100%25' height='100%25' filter='url(%23m)'/></svg>");
+  mask-size: 100% 100%;
+}
+
+.stamp--small { font-size: 0.95rem; padding: 0.35rem 0.75rem; border-width: 2px; }
+.stamp--large { font-size: 2.2rem; padding: 0.9rem 1.8rem; border-width: 5px; letter-spacing: 0.25em; }
+.stamp--double { border-style: double; border-width: 7px; }
+.stamp--faint { opacity: 0.4; }
+.stamp--ghost { opacity: 0.25; }
+
+.float-stamp {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ============================================================
+   TITLE BLOCK
+   ============================================================ */
+.title-block {
+  text-align: center;
+  padding: 2rem 2rem 3rem;
+  margin: 2rem auto 3rem;
+  max-width: 1100px;
+  font-family: var(--font-typewriter);
+}
+
+.title-block-pre {
+  font-size: 1.05rem;
+  letter-spacing: 0.35em;
+  color: var(--ink-faded);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.title-block h1 {
+  font-family: var(--font-typewriter);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  letter-spacing: 0.06em;
+  line-height: 1.45;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.title-block-by {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--ink-faded);
+  margin-top: 1.5rem;
+}
+
+/* ============================================================
+   BODY SECTIONS — like a real typewritten memo
+   ============================================================ */
+.section {
+  margin: 3rem 0;
+  font-family: var(--font-typewriter);
+}
+
+.section-heading {
+  font-family: var(--font-typewriter);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  color: var(--ink);
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+.section-heading-no {
+  font-weight: 700;
   letter-spacing: 0.05em;
 }
 
-/* Footer */
+.section p {
+  font-family: var(--font-typewriter);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 1.25rem;
+  text-indent: 3rem;
+  text-align: justify;
+  hyphens: auto;
+  color: var(--ink);
+}
+
+.section p.no-indent {
+  text-indent: 0;
+}
+
+.section p:first-of-type {
+  /* hanging cap of sorts — keep plain, real docs don't drop-cap */
+}
+
+/* numbered list inside body — looks like (a), (b), (c) etc. */
+.lettered-list {
+  list-style: none;
+  margin: 1rem 0 1.5rem 3rem;
+}
+
+.lettered-list > li {
+  font-family: var(--font-typewriter);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  padding-left: 3rem;
+  position: relative;
+  margin-bottom: 1.1rem;
+  text-align: justify;
+}
+
+.lettered-list > li::before {
+  content: '(' attr(data-letter) ')';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+}
+
+/* sub-points */
+.sub-list {
+  list-style: none;
+  margin: 0.4rem 0 0.6rem 1.5rem;
+}
+
+.sub-list > li {
+  font-family: var(--font-typewriter);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--ink);
+}
+
+.sub-list > li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* operational figures — typewritten table feel */
+.figures-table {
+  border-collapse: collapse;
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-family: var(--font-typewriter);
+  font-size: 1.1rem;
+  min-width: 480px;
+}
+
+.figures-table th,
+.figures-table td {
+  border: 2px solid var(--ink);
+  padding: 0.6rem 1.5rem;
+  text-align: left;
+}
+
+.figures-table th {
+  font-weight: 700;
+  background: rgba(0,0,0,0.06);
+}
+
+.figures-table td.num {
+  text-align: right;
+  font-weight: 700;
+}
+
+/* field rows — for the contact / personnel section */
+.field-row {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1rem;
+  padding: 0.4rem 0 0.4rem 3rem;
+  font-family: var(--font-typewriter);
+  font-size: 1.05rem;
+}
+
+.field-label {
+  color: var(--ink-faded);
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  align-self: center;
+}
+
+.field-value {
+  color: var(--ink);
+  border-bottom: 1px dotted var(--ink-faded);
+}
+
+/* ============================================================
+   REDACTIONS — heavy black bars
+   ============================================================ */
+.redacted {
+  background: var(--redact);
+  color: var(--redact);
+  padding: 0 0.6em;
+  user-select: none;
+  filter: url(#ink-bleed);
+  position: relative;
+}
+
+.redacted:hover { color: var(--paper-light); }
+
+/* ============================================================
+   SIGNATURE BLOCK
+   ============================================================ */
+.signature-block {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  font-family: var(--font-typewriter);
+  font-size: 1rem;
+  color: var(--ink-faded);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.signature-line {
+  border-bottom: 2px solid var(--ink);
+  min-width: 320px;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.signature-block .col-right {
+  text-align: right;
+}
+
+.signature-block .col-right .signature-line {
+  margin-left: auto;
+}
+
+/* margin annotation — handwritten-feel text in the gutter */
+.margin-note {
+  position: absolute;
+  font-family: 'Caveat', 'Cascadia Code', cursive;
+  font-size: 0.95rem;
+  color: rgba(0,0,0,0.7);
+  transform: rotate(-3deg);
+  pointer-events: none;
+  max-width: 130px;
+  line-height: 1.2;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
 .footer {
-  margin-top: auto;
-  padding: var(--spacing-lg) var(--spacing-md);
-  border-top: 1px solid var(--border-color);
+  padding: 2rem 1.5rem;
   text-align: center;
-  color: var(--text-secondary);
-  font-size: 0.875rem;
+  font-family: var(--font-typewriter);
+  font-size: 1rem;
+  color: var(--ink-faded);
+  letter-spacing: 0.05em;
 }
 
 .footer a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-.footer a:hover {
-  color: var(--accent-color);
+.footer-meta {
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+  color: var(--ink-worn);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
-/* Responsive Design */
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
 @media (max-width: 768px) {
-  .hero {
-    padding: var(--spacing-lg) var(--spacing-sm);
+  body { font-size: 17px; }
+  .page-frame {
+    padding: 2rem 1.25rem 2rem 3rem;
+    margin: 0;
   }
-
-  .hero-logo {
-    height: 100px;
-    margin-bottom: var(--spacing-sm);
+  .page-frame::after { display: none; }
+  .doc-top .vertical-stamp { display: none; }
+  .decl-box {
+    position: static;
+    width: auto;
+    margin-bottom: 1rem;
   }
-
-  .section {
-    padding: var(--spacing-lg) var(--spacing-sm);
-  }
-
-  .capabilities-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-sm);
-  }
-
-  .architecture-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-sm);
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-sm);
-  }
-
-  .header-content {
-    padding: 0 var(--spacing-sm);
-  }
-
-  .logo {
-    height: 32px;
-  }
-
-  .logo-text {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stat-number {
-    font-size: 2rem;
-  }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Selection color */
-::selection {
-  background-color: var(--accent-color);
-  color: white;
+  .agency-block { padding-top: 0; }
+  .agency-name { font-size: 1.15rem; }
+  .agency-block { font-size: 1rem; }
+  .doc-id { position: static; margin-bottom: 0.5rem; }
+  .doc-top { min-height: auto; }
+  .field-row { grid-template-columns: 1fr; gap: 0; padding-left: 0; }
+  .field-label { font-size: 0.78rem; }
+  .figures-table { margin-left: 0; font-size: 0.95rem; min-width: 0; width: 100%; }
+  .figures-table th, .figures-table td { padding: 0.4rem 0.6rem; }
+  .signature-block { grid-template-columns: 1fr; gap: 2rem; }
+  .signature-block .col-right { text-align: left; }
+  .signature-block .col-right .signature-line { margin-left: 0; }
+  .signature-line { min-width: 0; }
+  .section p { text-indent: 1.5rem; font-size: 1rem; }
+  .section-heading { font-size: 1.2rem; }
+  .lettered-list { margin-left: 0; }
+  .lettered-list > li { padding-left: 2.4rem; font-size: 1rem; }
+  .title-block h1 { font-size: clamp(1.3rem, 5vw, 1.7rem); }
+  .classification-banner { font-size: 0.85rem; letter-spacing: 0.3em; padding: 0.5rem; }
+  .stamp { font-size: 1rem; padding: 0.35rem 0.8rem; }
+  .stamp--large { font-size: 1.4rem; padding: 0.6rem 1.1rem; }
 }
